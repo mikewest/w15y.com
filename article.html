@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Web Accessibility</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <style>
+body {
+  margin: 0;
+  padding: 38px 0 0;
+}
+html {
+  background: #333 url(./static/images/texture.png);
+  margin: 0;
+  padding: 0;
+}
+
+article {
+  width: 640px;
+  padding: 20px 20px;
+  background: rgba(255,255,255,0.8);
+  margin: 0 auto;
+}
+
+article h1 {
+  color: #222;
+  font: 30px/1 'Open Sans', sans-serif;
+  font-weight: 600;
+  margin: 0 0 20px;
+  text-rendering: optimizeLegibility;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/** SITE HEADER **/
+header {
+  background: #111; 
+  border-bottom: 1px solid rgba(0,0,0,0.8);
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  box-shadow: -5px 3px 8px -2px rgba(0,0,0,0.8);
+}
+
+header h1 {
+  color: #EEE;
+  font: 28px/38px 'Open Sans', sans-serif;
+  font-weight: 700;
+  letter-spacing: -2px;
+  margin: 0 auto;
+  text-rendering: optimizeLegibility;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  width: 640px;
+}
+
+header h1 a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+header h1 span {
+  font-size: 28px;
+  color: #80D0FF;
+}
+
+p {
+  font: 20px Helvetica, Verdana, sans-serif;
+  color: #222;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><a href="/"><abbr title="Web Accessibility">W<span>15</span>Y</abbr></a></h1>
+    </header>
+    <article role="main">
+      <h1>Images require alternative text.</h1>
+      <iframe
+        width="640"
+        height="360"
+        src="https://www.youtube-nocookie.com/embed/nCgQDjiotG0"
+        frameborder="0"
+        title="A placeholder: Google Chrome Speed Tests, on YouTube"
+        allowfullscreen></iframe>
+
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+      <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+      <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+      <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+      <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+      <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur</p>
+    </article>
+  </body>
+</html>
