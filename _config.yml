@@ -1,0 +1,7 @@
+destination:    ./_site/
+lsi:            false
+markdown:       kramdown
+pygments:       false
+permalink:      /:categories/:title
+static_root:    "./static"
+tag_root:       /tags

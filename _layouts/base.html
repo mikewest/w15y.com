@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>
+      {% if page.tag %}
+        Items tagged &ldquo;{{ page.tag }}&rdquo; &mdash; 
+      {% elsif page.title %}
+        &ldquo;{{ page.title }}&rdquo; &mdash; 
+      {% endif %}
+      {% if page.completetitle %}
+        {{ page.completetitle }}
+      {% else %}
+        Web Accessibility (w15y)
+      {% endif %}
+    </title>
+    <link rel="stylesheet" href="{{ site.static_root }}/style.css" type="text/css">
+    <script src="{{ site.static_root }}/behavior.js"></script>
+
+    {% if page.teaser %}
+      <meta http-equiv="description" content="{{ page.teaser }}">
+    {% endif %}
+  </head>
+  <body>
+    {% include page_header.html %}
+    {{ content }}
+    {% include universal_footer.html %}
+  </body>
+</html>
