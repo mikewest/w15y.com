@@ -1,46 +1,25 @@
 body {
   margin: 0;
-  padding: 38px 0 0;
+  padding: 0;
 }
 
 html {
-  background: #333 url(/static/images/texture.png);
+  background: #203440 url(/static/images/texture.png);
   margin: 0;
   padding: 0;
 }
 
-article {
-  width: 640px;
-  padding: 20px 20px;
-  background: rgba(255,255,255,0.8);
-  margin: 0 auto;
-}
-
-article h1 {
-  color: #222;
-  background: #BBB;
-  font: 30px/1 'Open Sans', sans-serif;
-  font-weight: 600;
-  margin: 0 0 20px;
-  text-rendering: optimizeLegibility;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-}
-
 /** SITE HEADER **/
 header {
-  background: #111; 
-  border-bottom: 1px solid rgba(0,0,0,0.8);
-  position: fixed;
   width: 100%;
   z-index: 50;
   top: 0;
   left: 0;
-  box-shadow: -5px 3px 8px -2px rgba(0,0,0,0.8);
 }
 
 header h1 {
   color: #EEE;
-  font: 28px/38px 'Open Sans', sans-serif;
+  font: 26px/1.2 'Open Sans', sans-serif;
   font-weight: 700;
   letter-spacing: -2px;
   margin: 0 auto;
@@ -54,21 +33,61 @@ header h1 a {
   text-decoration: none;
 }
 
-header h1 span {
-  font-size: 28px;
+header h1 b {
+  /* Yes, `b`; the text is "stylistically offset". So there. */
   color: #80D0FF;
+  font-weight: 700;
+}
+
+/** SITE FOOTER **/
+small {
+  width: 642px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: block;
+  background: rgba(0,0,0,0.1);
+}
+
+/** ARTICLES **/
+article {
+  width: 642px;
+  padding: 20px 20px;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(0,0,0,0.9);
+  margin: 0 auto;
+}
+
+article h1 {
+  color: #203440;
+  font: 35px/1 'Open Sans', sans-serif;
+  font-weight: 600;
+  margin: 0.5em 0;
+  text-rendering: optimizeLegibility;
 }
 
 p {
-  font: 20px/1.4 Helvetica, Verdana, sans-serif;
-  color: #222;
+  font: 20px/1.4 'Open Sans', 'Helvetica Neue', Verdana, sans-serif;
+  color: #333;
+}
+
+pre {
+  background: #FFF;
+  margin: 0 -20px;
+  border-left: 8px solid #80D0FF;
+  padding: 1em 0 1em 12px;
 }
 
 code {
-  font: 20px Inconsolata;
+  font: 24px Inconsolata;
+  background: #FFF;
 }
 
-a {
-  color: #00A1FF;
+article a {
+  color: #40687F;
   text-decoration: none;
+  text-shadow: 0 0 2px rgba(255,255,255,0.5);
+}
+
+iframe {
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
 }
