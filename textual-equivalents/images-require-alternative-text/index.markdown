@@ -9,6 +9,10 @@ tags:
   - alternative text
   - images
   - screen reader
+  - textual equivalents
+
+elements:
+  - img
 
 ---
 Broadly speaking, there are two types of images on the web: on the one hand, we have images that add visual flair to our websites but don't actually contain information. On the other hand, we have images that are, in and of themselves, content.
