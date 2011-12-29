@@ -2,7 +2,7 @@
 
 layout: article
 title: "Form element require labels"
-youtube: "ztCXCqt-2-M"
+youtube: "T5OClvFL8I8"
 level: basics
 tags:
   - forms
@@ -18,7 +18,7 @@ elements:
   - textarea
 
 ---
-In the abstract, `<input type='text' name='field1'>` might represent a request for a user's name, it might request a credit card number, it might, in fact, request anything at all, as we use forms for a wide variety of purposes, ranging from trivial, one-box search fields up to hugely complex, multi-page beasts. Fields without clear labels are difficult for a sighted user to piece-together, and nearly impossible for a visually impaired user. This `input` would be read out as "Edit text." by a screen reader: a user would know that they should type _something_, but not have the slightest clue as to _what_.
+In the abstract, `<input type='text' name='field1'>` might represent a request for a user's name, it might request a credit card number, it might, in fact, request anything at all, as we use forms for a wide variety of purposes, ranging from trivial, one-box search fields up to hugely complex, multi-page beasts. Fields without clear labels are difficult for a sighted user to piece together, and practically impossible for a visually impaired user. The bare `input` above would be read out as "Edit text." by a screen reader: a user would know that she should type _something_, but not have the slightest clue as to _what_.
 
 A well-ordered mapping between a form element and its meaning is a simple requirement, regardless of a user's ability or disability. HTML, of course, recognizes this, and gives us the ability to bind a description to each form field via the `label` element. Labels are a core component of forms on the web, and have excellent support in browsers and assistive technologies.
 
