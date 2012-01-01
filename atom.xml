@@ -1,0 +1,32 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Web Accessibility</title>
+    <link rel="alternate"   type="text/html"            href="https://w15y.com/" />
+    <link rel="self"        type="application/atom+xml" href="https://w15y.com/atom.xml" />
+    <id>https://w15y.com/</id>
+    <author>
+        <name>Mike West</name>
+        <uri>https://mikewest.org/</uri>
+        <email>mike@mikewest.org</email>
+    </author>
+    <updated>2011-12-30T17:15:00+02:00</updated>
+    <entry>
+        <title type='text'>Coming Soon</title>
+        <link rel='alternate' href='https://w15y.com/' />
+        <id>https://w15y.com/comingsoon</id>
+        <updated>2011-12-30T17:15:00+02:00</updated>
+        <published>2011-12-30T17:15:00+02:00</published>
+        <content type='html'>
+            &lt;h1&gt;Web Accessibility: Coming soon&lt;/h1&gt;
+            &lt;p&gt;
+                Follow along on &lt;a href='https://w15y.com/+'&gt;on Google+&lt;/a&gt;
+                or &lt;a href='https://twitter.com/w15y'&gt;Twitter&lt;/a&gt; to get updated
+                when we've got something here here to show.
+            &lt;/p&gt;
+            &lt;p&gt;Soon!&lt;/p&gt;
+        </content>
+    </entry>
+</feed>
