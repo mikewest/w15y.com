@@ -1,3 +1,44 @@
+/**
+ * w15y.com
+ */
+
+/******************************************************************************
+ * Fonts
+ */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'),
+       local('OpenSans'),
+       url('./fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype),
+       url('./fonts/OpenSans-Regular.woff') format('woff'),
+       url('./fonts/OpenSans-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans'),
+       local('OpenSans'),
+       url('./fonts/OpenSans-Semibold.eot?#iefix') format('embedded-opentype),
+       url('./fonts/OpenSans-Semibold.woff') format('woff'),
+       url('./fonts/OpenSans-Semibold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('./fonts/Inconsolata-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Inconsolata-webfont.woff') format('woff'),
+         url('./fonts/Inconsolata-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/******************************************************************************
+ * Other Stuff
+ */
 body {
   margin: 0;
   padding: 0;
