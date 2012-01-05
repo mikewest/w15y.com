@@ -45,7 +45,7 @@ body {
 }
 
 html {
-  background: #203440 url(/static/images/texture.png);
+  background: #203440 url(./images/texture.png);
   margin: 0;
   padding: 0;
 }
