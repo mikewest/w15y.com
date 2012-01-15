@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Inputs and Labels</title>
+    <title>Controls and Focus</title>
     <link href='https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
     <link href='../../static/demo/prettify.css' rel='stylesheet'>
     <style>
@@ -52,7 +52,7 @@
         display: inline-block;
       }
 
-      section input {
+      section div {
         background: #FFF;
         border-radius: 0px;
         border: 1px solid black;
@@ -68,7 +68,7 @@
         text-shadow: 0 1px 1px rgba(0, 0, 0, .1);
       }
 
-      section input:focus {
+      section div:focus {
         outline: solid 10px purple;
         outline-offset: 5px;
       }
@@ -125,14 +125,11 @@
     </script>
   </head>
   <body>
-    <h1><code>input</code>s and <code>label</code>s</h1>
+    <h1>Controls and <code>focus</code></h1>
 
     <section id="rendering"></section>
 
-    <pre><code class='prettyprint lang-html' contenteditable='true' aria-hidden='true' id='code'>Name:
-&lt;input type='text'
-       name='field1'
-       
-       
-&gt;</code></pre>
+    <pre><code class='prettyprint lang-html' contenteditable='true' aria-hidden='true' id='code'>&lt;div role="button"&gt;
+  Click me.
+&lt;/div&gt;</code></pre>
 </html>
