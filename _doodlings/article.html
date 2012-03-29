@@ -3,79 +3,16 @@
   <head>
     <title>Web Accessibility</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-    <style>
-body {
-  margin: 0;
-  padding: 38px 0 0;
-}
-html {
-  background: #333 url(./static/images/texture.png);
-  margin: 0;
-  padding: 0;
-}
-
-article {
-  width: 640px;
-  padding: 20px 20px;
-  background: rgba(255,255,255,0.8);
-  margin: 0 auto;
-}
-
-article h1 {
-  color: #222;
-  font: 30px/1 'Open Sans', sans-serif;
-  font-weight: 600;
-  margin: 0 0 20px;
-  text-rendering: optimizeLegibility;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-/** SITE HEADER **/
-header {
-  background: #111; 
-  border-bottom: 1px solid rgba(0,0,0,0.8);
-  position: fixed;
-  width: 100%;
-  z-index: 50;
-  top: 0;
-  left: 0;
-  box-shadow: -5px 3px 8px -2px rgba(0,0,0,0.8);
-}
-
-header h1 {
-  color: #EEE;
-  font: 28px/38px 'Open Sans', sans-serif;
-  font-weight: 700;
-  letter-spacing: -2px;
-  margin: 0 auto;
-  text-rendering: optimizeLegibility;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-  width: 640px;
-}
-
-header h1 a {
-  color: #FFF;
-  text-decoration: none;
-}
-
-header h1 span {
-  font-size: 28px;
-  color: #80D0FF;
-}
-
-p {
-  font: 20px Helvetica, Verdana, sans-serif;
-  color: #222;
-}
-
-code {
-  font: 20px Inconsolata;
-}
-    </style>
+    <link href='../static/w15y.css' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <header>
-      <h1><a href="/"><abbr title="Web Accessibility">W<span>15</span>Y</abbr></a></h1>
+      <h1>
+        <a href="/">
+          <abbr title="Web Accessibility">W<span>15</span>Y</abbr>
+        </a>
+        Accessibility education for the modern web
+      </h1>
     </header>
     <article role="main">
       <h1>Images require alternative text.</h1>

@@ -1,0 +1,77 @@
+/**
+ *  w15y.css
+ */
+
+body {
+  margin: 0;
+  padding: 38px 0 0;
+}
+
+html {
+  background: #474b4f url(../static/images/texture.png);
+  margin: 0;
+  padding: 0;
+}
+
+/** Main Container **/
+[role=main] {
+  width: 640px;
+  padding: 20px 20px;
+  background: rgba(255,255,255,0.8);
+  margin: 0 auto;
+}
+
+[role=main] h1 {
+  color: #222;
+  font: 30px/1 'Open Sans', sans-serif;
+  font-weight: 600;
+  margin: 0 0 20px;
+  text-rendering: optimizeLegibility;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/** SITE HEADER **/
+header {
+  background: #111; 
+  border-bottom: 1px solid rgba(0,0,0,0.8);
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  box-shadow: -5px 3px 8px -2px rgba(0,0,0,0.8);
+}
+
+header h1 {
+  color: #BBB;
+  font: 20px/38px 'Open Sans', sans-serif;
+  font-weight: 400;
+  margin: 0 auto;
+  text-rendering: optimizeLegibility;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  width: 640px;
+  text-align: right;
+}
+
+header h1 a {
+  color: #FFF;
+  text-decoration: none;
+  float: left;
+  letter-spacing: -2px;
+  font: 28px/38px 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+header h1 span {
+  font-size: 28px;
+  color: #80D0FF;
+}
+
+p {
+  font: 20px Helvetica, Verdana, sans-serif;
+  color: #222;
+}
+
+code {
+  font: 20px Inconsolata;
+}

@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>W15Y: Accessibility education for the modern web developer</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Anonymous+Pro:400,700|Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <style>
+      /*
+       * The Grid:
+       * ---------
+       *
+       * | 18 | 107 | 18 | 107 | 18 | 107 | 18 | 107 | 18 | 107 | 18 | 107 | 18 |
+       * | 18 |    232    | 18 |    232    | 18 |    232    | 18 |
+       * | 18 |             482            | 18 |    232    | 18 |
+       * | 18 |                     732                     | 18 |
+       */
+      html {
+        background: #E0E0E0;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background: #FFF;
+        width: 768px;
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      code {
+        font-family: 'Anonymous Pro', monospace;
+      }
+
+      body > header {
+        background: #000;
+        padding: 0 18px;
+      }
+      h1 {
+        margin: 0;
+        font: 28px/1.5 'Open Sans';
+        color: #999;
+        font-weight: 700;
+        letter-spacing: -1px;
+      }
+      h1 a {
+        color: #FFF;
+        text-decoration: none;
+      }
+      h1 b {
+        color: #80D0FF;
+      }
+      section {
+        margin: 0;
+        padding: 0 18px;
+      }
+      section > header {
+        font: 25px/1.5 'Open Sans';
+        margin: 0;
+        padding: 14px 0;
+        border-bottom: 1px solid #DDD;
+      }
+      section > header img {
+        float: left;
+        margin: 9px 18px 0 0;
+      }
+      section > section {
+        margin: 14px 0 0;
+        padding: 0;
+        clear: left;
+      }
+      h2 {
+        font: 20px/1 'Open Sans';
+        font-weight: 700;
+        margin: 0;
+      }
+
+      .hoverbox {
+        list-style: none inside;
+        margin: 0.5em 0 0;
+        padding: 0;
+        overflow: hidden;
+      }
+        .hoverbox li {
+          float: left;
+          margin-left: 18px;
+        }
+          .hoverbox li:first-child {
+            margin-left: 0;
+          }
+        .hoverbox a {
+          background: #80D0FF;
+          line-height: 1;
+          position: relative;
+          width: 232px;
+          height: 134px;
+          display: block;
+        }
+        .hoverbox h3 {
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: #FFF;
+          font: 18px/1 'Open Sans';
+          font-weight: 600;
+          margin: 0;
+          padding: 9px;
+          z-index: 2;
+          background: rgba(0,0,0,0.5);
+          width: 214px;
+          -webkit-transition: all 0.5s ease;
+          -moz-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+          z-index: 1;
+        }
+        .hoverbox img {
+          display: block;
+          -webkit-transition: opacity 0.5s ease;
+          -moz-transition: opacity 0.5s ease;
+          transition: opacity 0.5s ease;
+          z-index: 1;
+        }
+        
+        .hoverbox :hover img {
+          opacity: 0.2;
+        }
+        .hoverbox :hover h3 {
+          background: rgba(0,0,0,0);
+          text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+        }
+        
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><a href='/'>W<b>15</b>Y</a></h1>
+    </header>
+    <section role='main'>
+      <header>
+        <img src="http://placehold.it/232x169">
+        It is both <strong>possible</strong> and <strong>practical</strong>
+        to build modern websites and applications that are accessible to
+        <em>all</em> potential users, including those with disabilities. We
+        aim to teach you how.
+      </header>
+      <section>
+        <h2>Recent &amp; Relevant</h2>
+        <ul class="hoverbox">
+          <li>
+            <a href="#">
+              <h3>Form elements require labels.</h3>
+              <img src="http://placehold.it/232x134" width="232">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h3>Images require alternative text.</h3>
+              <img src="http://placehold.it/232x134" width="232">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h3>Prefer <code>button</code> to <code>div</code>.</h3>
+              <img src="http://placehold.it/232x134" width="232">
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Further Reading</h2>
+        <ul>
+          <li><a href="http://www.w3.org/WAI/intro/wcag.php">Web Content Accessibility Guidelines (WCAG) Overview</a></li>
+        </ul>
+      </section>
+
+
+    </section>
+  </body>
+</html>
