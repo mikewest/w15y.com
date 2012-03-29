@@ -214,7 +214,7 @@ aside img {
       background: rgba(0,0,0,0);
       color: #FFF;
       text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-      border-left-color: #FFF;
+      border-left-color: rgba(0,0,0,0);
     }
   .hoverbox img {
     -moz-transition: opacity 0.5s ease;
