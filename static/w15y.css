@@ -1,77 +1,288 @@
 /**
- *  w15y.css
+ * W15Y CSS
+ * ========
+ *
+ * The site is laid out on a 6 x 107px grid with 18px gutters with the expected
+ * 3x, 2x, 1x variants:
+ *
+ * | 18 | 107 | 18 | 107 | 18 | 107 | 18 | 107 | 18 | 107 | 18 | 107 | 18 |
+ * | 18 |       232      | 18 |       232      | 18 |       232      | 18 |
+ * | 18 |                  482                 | 18 |       232      | 18 |
+ * | 18 |                             732                            | 18 |
+ *
+ * Everything else should be pretty straightforward.
  */
 
-body {
-  margin: 0;
-  padding: 38px 0 0;
+/* BASE ELEMENT STYLES ********************************************************/
+a,
+a:visited {
+  -moz-transition: color 0.5s ease;
+  -webkit-transition: color 0.5s ease;
+
+  color: #000;
+  transition: color 0.5s ease;
 }
 
+a:hover,
+a:focus {
+  color: #00A1FF;
+}
+
+code {
+  font-family: 'Anonymous Pro', monospace;
+}
+
+h1 {
+  color: #999;
+  font: 700 28px/42px 'Open Sans';
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+h2 {
+  font: 700 20px/1 'Open Sans';
+  margin: 0;
+}
+
+pre {
+  background: #EEE;
+  border-left: 8px solid #80D0FF;
+  margin: 0 -18px;
+  padding: 1em 18px 1em 10px;
+}
+
+pre code {
+  color: #000;
+}
+
+/** SITE FRAMEWORK ************************************************************/
 html {
-  background: #474b4f url(../static/images/texture.png);
+  background: #E0E0E0;
   margin: 0;
   padding: 0;
 }
 
-/** Main Container **/
-[role=main] {
-  width: 640px;
-  padding: 20px 20px;
-  background: rgba(255,255,255,0.8);
-  margin: 0 auto;
+body {
+  background: #FFF;
+  box-shadow: 0 0 5px rgba(0,0,0,0.25);
+  margin: 0 auto 2em;
+  padding: 0;
+  width: 768px;
 }
 
-[role=main] h1 {
-  color: #222;
-  font: 30px/1 'Open Sans', sans-serif;
-  font-weight: 600;
-  margin: 0 0 20px;
-  text-rendering: optimizeLegibility;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+/** SITE HEADER ***************************************************************/
+body > header {
+  background: #000;
+  padding: 0 18px;
 }
 
-/** SITE HEADER **/
-header {
-  background: #111; 
-  border-bottom: 1px solid rgba(0,0,0,0.8);
-  position: fixed;
-  width: 100%;
-  z-index: 50;
-  top: 0;
-  left: 0;
-  box-shadow: -5px 3px 8px -2px rgba(0,0,0,0.8);
+body > header h1 {
+  float: left;
 }
 
-header h1 {
-  color: #BBB;
-  font: 20px/38px 'Open Sans', sans-serif;
-  font-weight: 400;
-  margin: 0 auto;
-  text-rendering: optimizeLegibility;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-  width: 640px;
-  text-align: right;
-}
-
-header h1 a {
+body > header h1 a,
+body > header h1 a:visited,
+body > header h1 a:hover,
+body > header h1 a:focus {
   color: #FFF;
   text-decoration: none;
-  float: left;
-  letter-spacing: -2px;
-  font: 28px/38px 'Open Sans', sans-serif;
-  font-weight: 700;
 }
 
-header h1 span {
-  font-size: 28px;
+body > header h1 b {
+  /* Yes, `b`; the text is "stylistically offset". So there. */
   color: #80D0FF;
 }
 
-p {
-  font: 20px Helvetica, Verdana, sans-serif;
-  color: #222;
+body > header p {
+  color: #999;
+  font: 18px/42px 'Open Sans';
+  margin: 0;
+  text-align: right;
 }
 
-code {
-  font: 20px Inconsolata;
+/** SITE MAIN CONTENT *********************************************************/
+section, article {
+  margin: 0;
+  padding: 0 18px;
+}
+
+/**** HOMEPAGE HEADER *********************************************************/
+section > header {
+  border-bottom: 1px solid #DDD;
+  font: 25px/1.5 'Open Sans';
+  margin: 0;
+  padding: 14px 0;
+}
+
+section > header img {
+  float: left;
+  margin: 9px 18px 0 0;
+}
+
+/**** HOMEPAGE SECTIONS *******************************************************/
+.recent, .links {
+  border-bottom: 1px solid #DDD;
+  clear: left;
+  margin: 14px 0 0;
+  padding: 0 0 14px;
+}
+
+.links,
+section > aside {
+  border-bottom: 1px solid #DDD;
+  float: left;
+  margin: 14px 0 0 18px;
+  padding-bottom: 14px;
+  width: 232px;
+}
+
+aside a {
+  text-decoration: none;
+}
+
+aside p {
+  font: 16px/28px 'Open Sans', sans-serif;
+  margin: 14px 0 0;
+}
+
+aside img {
+  vertical-align: middle;
+}
+
+
+/**** HOMEPAGE LINKS **********************************************************/
+.links {
+  width: 482px;
+  margin-left: 0;
+}
+  .links li {
+    font: 18px/32px 'Open Sans', sans-serif;
+    list-style: none inside;
+    padding: 0 0 0 1em;
+    margin: 0 0 1em;
+    text-indent: -1em;
+  }
+  .links ul {
+    margin: 14px 0 0;
+    padding: 0;
+  }
+
+/**** "Hoverbox" LIST ********************************************************/
+.hoverbox {
+  list-style: none inside;
+  margin: 14px 0 0;
+  overflow: hidden;
+  padding: 0;
+}
+  .hoverbox li {
+    float: left;
+    margin-left: 18px;
+  }
+    .hoverbox li:first-child {
+      margin-left: 0;
+    }
+ .hoverbox a {
+    background: #00A1FF;
+    display: block;
+    height: 130px;
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+    width: 232px;
+  }
+  .hoverbox h3 {
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+
+    background: rgba(255,255,255,0.85);
+    border-left: 4px solid #80D0FF;
+    color: #000;
+    font: 600 18px/1 'Open Sans';
+    left: 0;
+    margin: 0;
+    padding: 9px;
+    position: absolute;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0);
+    top: 20px;
+    transition: all 0.5s ease;
+    width: 210px;
+    z-index: 2;
+  }
+    .hoverbox :hover h3,
+    .hoverbox :focus h3 {
+      background: rgba(0,0,0,0);
+      color: #FFF;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+      border-left-color: #FFF;
+    }
+  .hoverbox img {
+    -moz-transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+
+    display: block;
+    position: relative;
+    top: -22px;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+  }
+    .hoverbox :hover img,
+    .hoverbox :focus img {
+      opacity: 0.2;
+    }
+
+/** ARTICLES*** ***************************************************************/
+article {
+  font: 20px/32px 'Open Sans', Helvetica, sans-serif;
+  color: #333;
+  padding-bottom: 14px;
+  overflow: hidden;
+}
+
+article h1 {
+  font: 700 28px/32px 'Open Sans', Helvetica, sans-serif;
+  color: #111;
+  margin: 23px 0;
+}
+
+article section,
+article aside {
+  overflow:hidden;
+  font-size: 18px;
+  line-height: 1.4;
+  background: #DDD;
+  width: 214px;
+  padding: 0 9px 9px;
+  float: left;
+  margin-top: 0;
+}
+
+article aside p {
+  line-height: 24px;
+  margin: 9px 0;
+}
+
+article aside h4 {
+  font: 600 20px/32px 'Open Sans', Helvetica, sans-serif;
+  margin: 9px 0 0;
+}
+
+article aside {
+  margin-left: 18px;
+}
+
+article section {
+  width: 464px;
+}
+
+/** SIDE COPYRIGHT ************************************************************/
+body > small {
+  clear: both;
+  background: #222;
+  border-top: 1px solid #00A1FF;
+  color: #999;
+  display: block;
+  font: 14px/32px sans-serif;
+  text-align: right;
+  padding: 0 18px;
 }

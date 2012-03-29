@@ -13,6 +13,7 @@ tags:
   - aria
   - screen reader
 
+teaser: It's tempting to use `div` and `span` elements for practically every widget on a page. Here, you'll see why `button` or `a` elements are preferable.
 ---
 MIKE WEST >> Hello, Internet! Welcome to Web Accessibility.
 

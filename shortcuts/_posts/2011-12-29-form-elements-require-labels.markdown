@@ -17,6 +17,7 @@ elements:
   - select
   - textarea
 
+teaser: Form elements, all of them, require labels. Here, you'll see why.
 ---
 In the abstract, `<input type='text' name='field1'>` might represent a request for a user's name, it might request a credit card number, it might, in fact, request anything at all, as we use forms for a wide variety of purposes, ranging from trivial, one-box search fields up to hugely complex, multi-page beasts. Fields without clear labels are difficult for a sighted user to piece together, and practically impossible for a visually impaired user. The bare `input` above would be read out as "Edit text." by a screen reader: a user would know that she should type _something_, but not have the slightest clue as to _what_.
 

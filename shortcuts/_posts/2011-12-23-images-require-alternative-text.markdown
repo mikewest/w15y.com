@@ -14,6 +14,7 @@ tags:
 elements:
   - img
 
+teaser: Images, all of them, require alternative text specified via an `alt` element. Really.
 ---
 Broadly speaking, there are two types of images on the web: on the one hand, we have images that add visual flair to our websites but don't actually contain information. On the other hand, we have images that are, in and of themselves, content.
 
@@ -23,6 +24,7 @@ It should be clear that the latter type of image requires alternative text. Info
          height="600"
          width="400"
          alt="The Golden Gate Bridge">
+{:lang="html"}
 
 That `alt` attribute associates additional semantic information with the image, which can be used by assistive technologies like screen readers in order to give a user who can't _see_ the page some much needed context.
 

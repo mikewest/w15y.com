@@ -4,4 +4,5 @@ markdown:       kramdown
 pygments:       false
 permalink:      /:categories/:title
 static_root:    "https://w15ydotcom.hasacdn.net/20111230"
+static_root:    "/static"
 tag_root:       /tags

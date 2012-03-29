@@ -1,101 +1,68 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Web Accessibility</title>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
-    <style>
-html {
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyAgMAAABjUWAiAAAACXBIWXMAAAsTAAALEwEAmpwYAAAACVBMVEVGSk5HS09ITFA1pdUuAAACN0lEQVQoU02SwW6iUBiF/2nUTLtSI6aw0kkxxafQSTHiCgzecFmB8RIvT2EnA1FXYLxEWGHDJcJTttPOovtzcr4vOYCwUWT2/m+/U7gOGEV8tEL+wmLVz6G1ZKji/RDppTeAJhUIkzR+20/dNtzZ+Ep62OWV6e1gI14clGQbrm+3DqwtEuQBQWWiRDqgKHYDsjUE3aomcFD2XEX0jBAa53CS5nfXW9Z5HlweJlDKbIbSBhvIPGuDUc/rELduTyPD0oFoZfljRXSL0rT9wULLxaoVhpekM4H/lb6hJpIOcvnas/GXSQ6OYjPSbBBelsyB8TBjmdhap/uHkQ6mXTfIQX2Vs+gAYJbIesNxj538aRsuWLdMmgS+V69y+JdHmMWfZtCfu6Lygjm7VNiBqTy/p15wNkiY5LBa0MYh+9oB+JylErWXxw+yVIuJ0Qv4/qTIE1D7iUmf1smwMmQHyNKg22t39Jvz9QCmIqUVt2cZOr/t4Gq+FFnU2KHZRXHANzXcQ3UoC9sqB8oTPgbEp27MBnALfbTdiEdv8JzqwFxEiCBE2qr5K4fRXZyhG8W7hcgi+BSrHzH1x7YDLe9R4GWqmJIkOWDyM3tLw9PY4x5A98/9rvBYLSGnuwP67QYOrNQ6n1lnq4urnxEMDVFkzcXGPw2LNhBylNOOhkdF50mHcort5ty9t+vNSQctrQLE/IOn+uUE/MOtrEe0VlEafvhp9DW51nyZhl4E38DWOsw126OdyBR8MtPfARp5+bJpgfetAAAAAElFTkSuQmCC");
-  /* " */
-  height:     100%;
-  width:      100%;
-}
-body {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-box-pack: center;
-  -webkit-box-align: center;
-
-  display: -moz-box;
-  -moz-box-orient: vertical;
-  -moz-box-pack: center;
-  -moz-box-align: center;
-
-  box-align:  center;
-  box-orient: vertical;
-  box-pack:   center;
-  display:    box;
-  height:     100%;
-  margin:     0;
-  padding:    0;
-  width:      100%;
-}
-h1 {
-  color: #EEE;
-  font: 70px/1 'Open Sans', sans-serif;
-  font-variant: small-caps;
-  font-weight: 600;
-  margin: 0;
-  text-align: center;
-  text-rendering: optimizeLegibility;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-  width: 100%;
-}
-h1 .numbers {
-  font-size: 49px;
-}
-h1 span {
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
-
-  display: inline-block;
-  opacity: 1;
-  white-space: nowrap;
-}
-h1:hover > span {
-  opacity: 1;
-}
-h1 .hidden {
-  overflow: hidden;
-  width: 0px;
-}
-h1 .hidden span {
-  position: relative;
-  top: 5px;
-}
-h1:hover .hidden {
-  width: 7.7em;
-}
-p {
-  color: #80D0FF; 
-  font-weight: 400;
-  font: 40px/1.2 'Open Sans', sans-serif;
-  text-rendering: optimizeLegibility;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-  margin: 1em 0;
-}
-a {
-  color: #80D0FF;
-}
-p.updates {
-  font-size: 30px;
-  width: 415px;
-  text-align: center;
-  margin: 0;
-}
-    </style>
-  </head>
-  <body>
-    <h1>
-      <span id="w15y">
-        w<span class="hidden">eb accessibility <span>&asymp;</span>
-        w</span><span class="numbers">15</span>y
-        <!-- Yes, 15. The space counts. ;) -->
-      </span>
-    </h1>
-    <p>Coming soon.</p>
-    <p class="updates">Updates via <a href="https://w15y.com/+">Google+</a> or <a href="https://twitter.com/w15y">Twitter</a>, as you like.</p>
-  </body>
-</html>
+---
+layout: base
+completetitle: "W15Y: Accessibility for the modern web developer."
+teaser: >
+  Modern websites and applications should be accessible to all users, including
+  those with disabilities. We aim to teach you how.
+---
+    <section role='main'>
+      <header>
+        <img src="http://placehold.it/232x169">
+        It is both <strong>possible</strong> and <strong>practical</strong>
+        to build modern websites and applications that are accessible to
+        <em>all</em> potential users, including those with disabilities. We
+        aim to teach you how.
+      </header>
+      <section class="recent">
+        <h2>Accessibility Shortcuts</h2>
+        <ul class="hoverbox">
+          {% for post in site.posts limit:6 %}
+          <li>
+            <a href="{{ post.url }}">
+              <h3>{{ post.title }}</h3>
+              <img src="https://i.ytimg.com/vi/{{ post.youtube }}/hqdefault.jpg" width="232">
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+      <section class="links">
+        <h2>Further Reading</h2>
+        <ul>
+          <li>
+            The W3C's
+            <a href="http://www.w3.org/TR/WCAG/">Web Content Accessibility
+              Guidelines</a>
+            are solid recommendations to developers and authors. Many of
+            w15y.com's principles are rooted in this document. It's long and
+            involved, however: the
+            <a href="http://www.w3.org/WAI/intro/wcag.php">WCAG Overview</a>
+            might be useful.
+          </li>
+          <li>
+            <a href="http://dev.w3.org/html5/alt-techniques/">Techniques for
+              Providing Useful Text Alternatives</a> is a great, and incredibly
+            detailed discussion of when and how to use alternative text in an
+            HTML document. Very practical work indeed, and worth using as a
+            reference.
+          </li>
+        </ul>
+      </section>
+      <aside>
+        <h2>Get in touch</h2>
+        <p>
+          <a href="mailto:mike@w15y.com">Email
+            <strong>mike@w15y.com</strong></a>
+          with questions or comments, and feel more than free to 
+          <a href="https://plus.google.com/101282388769226463366/">add
+            <strong>Web Accessibility</strong> to your circles on
+            <img src="https://ssl.gstatic.com/images/icons/gplus-32.png"
+                 height="32"
+                 width="32"
+                 alt="Google Plus"></a>
+          , or
+          <a href="https://twitter.com/w15y">follow <strong>@w15y</strong> on
+            Twitter</a>
+        </p>
+      </aside>
+    </section>
