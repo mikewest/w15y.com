@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>W15Y: Accessibility education for the modern web developer</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Anonymous+Pro:400,700|Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <style>
+      /*
+       * The Grid:
+       * ---------
+       *
+       * | 18 | 107 | 18 | 107 | 18 | 107 | 18 | 107 | 18 | 107 | 18 | 107 | 18 |
+       * | 18 |    232    | 18 |    232    | 18 |    232    | 18 |
+       * | 18 |             482            | 18 |    232    | 18 |
+       * | 18 |                     732                     | 18 |
+       */
+      html {
+        background: #E0E0E0;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background: #FFF;
+        width: 768px;
+        margin: 0 auto 2em;
+        padding: 0;
+        box-shadow: 0 0 5px rgba(0,0,0,0.25);
+      }
+
+      code {
+        font-family: 'Anonymous Pro', monospace;
+      }
+
+      body > header {
+        background: #000;
+        padding: 0 18px;
+      }
+      body > header h1 {
+        float: left;
+      }
+      body > header p {
+        font: 18px/42px 'Open Sans';
+        color: #999;
+        text-align: right;
+        margin: 0;
+      }
+      h1 {
+        margin: 0;
+        font: 700 28px/42px 'Open Sans';
+        color: #999;
+        letter-spacing: -1px;
+      }
+      h1 a {
+        color: #FFF;
+        text-decoration: none;
+      }
+      h1 b {
+        /* Yes, `b`; the text is "stylistically offset". So there. */
+        color: #80D0FF;
+      }
+      section, article {
+        margin: 0;
+        padding: 0 18px;
+      }
+      section > header {
+        font: 25px/1.5 'Open Sans';
+        margin: 0;
+        padding: 14px 0;
+        border-bottom: 1px solid #DDD;
+      }
+      section > header img {
+        float: left;
+        margin: 9px 18px 0 0;
+      }
+      section > section {
+        margin: 14px 0 0;
+        padding: 0 0 14px;
+        clear: left;
+        border-bottom: 1px solid #DDD;
+      }
+      section > aside {
+        border-bottom: 1px solid #DDD;
+      }
+      h2 {
+        font: 700 20px/1 'Open Sans';
+        margin: 0;
+      }
+
+      .hoverbox {
+        list-style: none inside;
+        margin: 14px 0 0;
+        padding: 0;
+        overflow: hidden;
+      }
+        .hoverbox li {
+          float: left;
+          margin-left: 18px;
+        }
+          .hoverbox li:first-child {
+            margin-left: 0;
+          }
+       .hoverbox a {
+          overflow: hidden;
+          background: #00A1FF;
+          line-height: 1;
+          position: relative;
+          width: 232px;
+          height: 130px;
+          display: block;
+        }
+        .hoverbox h3 {
+          position: absolute;
+          top: 20px;
+          left: 0;
+          color: #000;
+          font: 600 18px/1 'Open Sans';
+          margin: 0;
+          padding: 9px;
+          z-index: 2;
+          width: 210px;
+          border-left: 4px solid #80D0FF;
+          -webkit-transition: all 0.5s ease;
+          -moz-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+          z-index: 2;
+          background: rgba(255,255,255,0.85);
+          text-shadow: 1px 1px 1px rgba(0,0,0,0);
+          text-decoration: none;
+        }
+        .hoverbox img {
+          display: block;
+          -webkit-transition: opacity 0.5s ease;
+          -moz-transition: opacity 0.5s ease;
+          transition: opacity 0.5s ease;
+          z-index: 1;
+          position: relative;
+          top: -22px;
+        }
+        
+        .hoverbox :hover img,
+        .hoverbox :focus img {
+          opacity: 0.2;
+        }
+        .hoverbox :hover h3,
+        .hoverbox :focus h3 {
+          color: #FFF;
+          background: rgba(0,0,0,0);
+          text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+        }
+
+      .links,
+      aside {
+        margin: 14px 0 0 18px;
+        padding-bottom: 14px;
+        width: 232px;
+        float: left;
+      }
+      aside p {
+        font: 16px/32px 'Open Sans', sans-serif;
+        margin: 14px 0 0;
+      }
+      aside a {
+        color: #000;
+        text-decoration: none;
+        -webkit-transition: color 0.5s ease;
+        -moz-transition: color 0.5s ease;
+        transition: color 0.5s ease;
+      }
+      aside a:hover,
+      aside a:focus {
+        color: #00A1FF;
+      }
+      aside img {
+        vertical-align: middle;
+      }
+
+/* HOMEPAGE LINKS */
+      .links {
+        width: 482px;
+        margin-left: 0;
+      }
+      .links li {
+        font: 18px/32px 'Open Sans', sans-serif;
+        list-style: none inside;
+        padding: 0 0 0 1em;
+        margin: 0 0 1em;
+        text-indent: -1em;
+      }
+      .links ul {
+        margin: 14px 0 0;
+        padding: 0;
+      }
+
+/* ARTICLE */
+      article {
+        font: 20px/32px 'Open Sans', Helvetica, sans-serif;
+        color: #333;
+        padding-bottom: 14px;
+        overflow: hidden;
+      }
+      article h1 {
+        font: 700 28px/32px 'Open Sans', Helvetica, sans-serif;
+        color: #111;
+        margin: 23px 0;
+      }
+      pre {
+        background: #EEE;
+        border-left: 8px solid #80D0FF;
+        margin: 0 -18px;
+        padding: 1em 18px 1em 10px;
+      }
+      pre code {
+        color: #000;
+      }
+      article section,
+      article aside {
+        overflow:hidden;
+        font-size: 18px;
+        line-height: 1.4;
+        background: #DDD;
+        width: 214px;
+        padding: 0 9px 9px;
+        float: left;
+        margin-top: 0;
+      }
+      article aside p {
+        margin: 9px 0;
+      }
+      article aside h4 {
+        font: 600 20px/32px 'Open Sans', Helvetica, sans-serif;
+        margin: 9px 0 0;
+      }
+      article section {
+        width: 464px;
+      }
+
+/* COPYRIGHT */
+      body > small {
+        clear: both;
+        background: #222;
+        border-top: 1px solid #00A1FF;
+        color: #999;
+        display: block;
+        font: 14px/32px sans-serif;
+        text-align: right;
+        padding: 0 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><a href='/'>W<b>15</b>Y</a></h1>
+      <p>Accessibility for the modern web developer</p>
+    </header>
+    <article role="main">
+      <h1>Images require alternative text.</h1>
+      <iframe
+        width="732"
+        height="402"
+        src="https://www.youtube-nocookie.com/embed/ztCXCqt-2-M?autohide=1&amp;color=white&amp;showinfo=0"
+        frameborder="0"
+        title="YouTube embed of 'Images require alternative text'"
+        allowfullscreen></iframe>
+<p>MIKE WEST &gt;&gt; Hello, Internet! Welcome to Web Accessibility.</p>
+
+<p>I&#8217;d like the next threeish minutes of your life to be dedicated to the necessity of alternative text for images on your webpages. I know that doesn&#8217;t sound critical, but it is in fact quite important. Let&#8217;s dive right in.</p>
+
+<p>Broadly speaking, there are two types of images on the web: on the one hand, we have images that add visual flair to our websites but don&#8217;t actually contain information. On the other hand, we have images that are, in and of themselves, content.</p>
+
+<p>It should be clear to all of us that the latter type of image requires alternative text. Information should always be textually available on a page to users who can&#8217;t visually parse an image. An image tag with this contextual information might look like this, with the <code>src</code>, <code>height</code>, and <code>width</code> attributes set, all accompanied by an <code>alt</code> attribute containing some clever bit of text:</p>
+
+<pre><code>&lt;img src=&quot;./images/901d3n94t3.jpg&quot;
+     height=&quot;600&quot;
+     width=&quot;400&quot;
+     alt=&quot;Alternative text!&quot;&gt;
+</code></pre>
+
+<p>That attribute associates additional semantic information with the image, which can be used by assistive technologies like screen readers in order to give a user who can&#8217;t <em>see</em> the page some much needed context.</p>
+
+<p>Let&#8217;s see how that sounds: on this demo page, the first image here has an <code>alt</code> attribute. When I interact with it, the screen reader reads:</p>
+
+<p>CHROMEVOX &gt;&gt; The Golden Gate Bridge!</p>
+
+<p>MIKE WEST &gt;&gt; &#8220;The Golden Gate Bridge&#8221;. Now I know what this image is, even though I can&#8217;t see it.</p>
+
+<p>Later, we&#8217;ll talk more specifically about what sort of text you should write for what sorts of images; it&#8217;s enough of a discussion to merit its own conversation. For now, I simply want it to be clear that you must write something, because the alternative is terrible.</p>
+
+<p>Let&#8217;s assume for a moment we didn&#8217;t have that <code>alt</code> attribute on the image. What would a screen reader do in that situation? In short, it would do its very best to give you whatever context it could. The height and width are meaningless to a visually impaired user, so all it can run with is the image&#8217;s name.</p>
+
+<p>Let&#8217;s hear how that sounds:</p>
+
+<pre><code>&lt;img src=&quot;./images/901d3n94t3.jpg&quot;
+     height=&quot;600&quot;
+     width=&quot;400&quot;&gt;
+</code></pre>
+
+<p>CHROMEVOX &gt;&gt; Nine zero one D three N nine four T three. Image.</p>
+
+<p>MIKE WEST &gt;&gt; This is horrible experience, especially as image names are increasingly unlikely to be useful as we move more and more to systems that automatically generate images of different sizes on the fly. Having meaningless strings of numbers read out is one of the single best ways to frustrate your users, and drive traffic away from your sites.</p>
+
+<p>All images require alternative text, period.</p>
+
+<p>But what about that first type of image? Decoration without semantic meaning often does end up as image tags on our pages, and we don&#8217;t really want to have alternative text like &#8220;decorative bar&#8221; read out to visually impaired users, that simply isn&#8217;t helpful.</p>
+
+<p>In that case, you actually still need an <code>alt</code> attribute, but you should explicitly set it to the empty string. An empty <code>alt</code> attribute is an entirely different thing from a missing <code>alt</code> attribute. The empty attribute says &#8220;I&#8217;ve thought about this. This image is purely decorative. Please ignore it.&#8221; The screen reader will follow your implicit advice, skipping over the image entirely when reading the page.</p>
+
+<p>The third image here demonstrates that: [Click] I&#8217;ll interact with it, but we hear nothing. The screen reader simply doesn&#8217;t read this image, we&#8217;ve told the screen reader that it&#8217;s meaningless.</p>
+
+<pre><code>&lt;img src=&quot;./images/decoration.jpg&quot;
+     height=&quot;600&quot;
+     width=&quot;400&quot;
+     alt=&quot;&quot;&gt;
+</code></pre>
+
+<p>So, in summary: <em>every</em> image requires alternative text. Purely decorative images should contain an empty <code>alt</code> attribute so that they&#8217;re skipped over, informative images should contain a meaningful textual equivalent, and no images at all should be left completely without an <code>alt</code> attribute.</p>
+
+<p>For more discussion of accessibility on the web, visit us at w15y.com, that&#8217;s w15y.com.</p>
+
+      <section>
+
+      </section>
+      <aside>
+        <h4>Spread the word!</h4>
+        <p>
+          If you found this article useful, chances are that you might know
+          some people that would also be interested. Please share!
+        </p>
+        <div class="g-plusone" data-size="medium"></div>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="w15y" data-related="w15y">Tweet</a>
+      </aside>
+    </article>
+    <small>
+      &copy;2012 w15y.com
+    </small>
+    <script src="https://apis.google.com/js/plusone.js" async='true'></script>
+    <script src="https://platform.twitter.com/widgets.js" async='true'></script>
+  </body>
+</html>
