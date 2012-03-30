@@ -7,11 +7,11 @@ teaser: >
 ---
     <section role='main'>
       <header>
-        <img src="http://placehold.it/232x169">
+        <img src="http://placehold.it/232x180">
         It is both <strong>possible</strong> and <strong>practical</strong>
         to build modern websites and applications that are accessible to
-        <em>all</em> potential users, including those with disabilities. We
-        aim to teach you how.
+        <em>all</em> potential users, including those with disabilities.
+        <span>Here, we'll teach you how.</span>
       </header>
       <section class="recent">
         <h2>[INSERT TITLE HERE]</h2>
@@ -19,8 +19,8 @@ teaser: >
           {% for post in site.posts limit:6 %}
           <li>
             <a href="{{ post.url }}">
-              <h3>{{ post.title }}</h3>
-              <img src="https://i.ytimg.com/vi/{{ post.youtube }}/hqdefault.jpg" width="232">
+              <h3>{{ post.title | markdownify_fragment }}</h3>
+              <img src="https://i.ytimg.com/vi/{{ post.youtube }}/hqdefault.jpg" width="232" alt="">
             </a>
           </li>
           {% endfor %}

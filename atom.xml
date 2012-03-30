@@ -13,20 +13,23 @@ layout: nil
         <email>mike@mikewest.org</email>
     </author>
     <updated>2011-12-30T17:15:00+02:00</updated>
+{% for post in site.posts limit:10 %}
+    {% if forloop.first %}
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    {% endif %}
     <entry>
-        <title type='text'>Coming Soon</title>
-        <link rel='alternate' href='https://w15y.com/' />
-        <id>https://w15y.com/comingsoon</id>
-        <updated>2011-12-30T17:15:00+02:00</updated>
-        <published>2011-12-30T17:15:00+02:00</published>
+        <title type='text'>{{ post.title }}</title>
+        <link rel="alternate" href="https://w15y.com{{ post.url }}" />
+        <id>https://w15y.com{{ post.id }}</id>
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+        <published>{{ post.date | date_to_xmlschema }}</published>
         <content type='html'>
-            &lt;h1&gt;Web Accessibility: Coming soon&lt;/h1&gt;
-            &lt;p&gt;
-                Follow along on &lt;a href='https://w15y.com/+'&gt;on Google+&lt;/a&gt;
-                or &lt;a href='https://twitter.com/w15y'&gt;Twitter&lt;/a&gt; to get updated
-                when we've got something here here to show.
-            &lt;/p&gt;
-            &lt;p&gt;Soon!&lt;/p&gt;
+          {{ if post.youtube }}
+          &lt;iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/{{ post.youtube }}" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+          {{ endif }}
+
+          {{ post.content | xml_escape }}
         </content>
     </entry>
+{% endfor %}
 </feed>
