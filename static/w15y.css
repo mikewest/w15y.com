@@ -144,6 +144,30 @@ section > header em {
   margin-right: 0.15em;
 }
 
+.cta,
+.cta:visited {
+  display: inline-block;
+  background: #00A1FF;
+  background-image: -moz-linear-gradient(bottom, #00A2FF, #33BBFF);
+  background-image: -ms-linear-gradient(bottom, #00A2FF, #33BBFF);
+  background-image: -o-linear-gradient(bottom, #00A2FF, #33BBFF);
+  background-image: -webkit-linear-gradient(bottom, #00A2FF, #33BBFF);
+  background-image: linear-gradient(bottom, #00A2FF, #33BBFF);
+  border: 1px solid #00A2FF;
+  text-shadow: -1px -1px 1px #00A1FF, 1px 1px 1px #33BBFF;
+  color: #FFF;
+  font-weight: 700;
+  padding: 0 8px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.cta:hover,
+.cta:focus,
+.cta:active {
+  color: #FFF;
+  background: #3BF;
+}
+
 /**** HOMEPAGE SECTIONS *******************************************************/
 .recent, .links {
   border-bottom: 1px solid #DDD;
